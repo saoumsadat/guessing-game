@@ -20,7 +20,7 @@ const takeInputAndTest = () => {
 
   if (tries === 0 && input !== chosenNum) {
     warningWithHint.textContent = `Sorry! You failed to guess the number. It was ${chosenNum}`;
-    trySentence.textContent = `${tries} ${tryGrammar.textContent} left`;
+    trySentence.style.display = "none";
     inputArea.value = ``;
     inputBtn.setAttribute("disabled", "disabled");
     return;
@@ -51,8 +51,8 @@ const tryCounter = () => {
 //things to do upon clicking on the "Submit" button
 formElm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  input = parseInt(inputArea.value)
-  if (!(input > 1 || input < 20)) {
+  input = parseInt(inputArea.value);
+  if (!(input >= 1 && input <= 20)) {
     alert("Hey! The number must be between 1 and 20");
   } else {
     inputArea.value = "";
@@ -67,6 +67,7 @@ resetBtn.addEventListener("click", (evt) => {
   tries = 5;
   input = null;
   tryCountNum.textContent = tries;
+  tryGrammar.textContent = "tries";
   trySentence.style.display = "block"
   inputBtn.removeAttribute("disabled", "disabled");
   inputArea.value = "";
