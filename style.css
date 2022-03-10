@@ -1,0 +1,46 @@
+.heading {
+  color: red;
+  text-align: center;
+  font-family: monospace;
+}
+.rule {
+  text-align: center;
+}
+
+.wishLuck {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.inputArea {
+  margin: auto;
+  display: block;
+}
+
+.submit, .reset {
+  background-color: rgb(201, 243, 185);
+  border-color: rgb(175, 212, 151);
+  border-radius: 50px;
+  border-style: double;
+  margin: 20px;
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.submit:hover, .reset:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px 1px rgba(29, 52, 182, 0.2);
+}
+
+.inputArea {
+  border-radius: 50px;
+  height: 20px;
+  border-style: solid;
+  border-color: gray;
+  text-align: center;
+  font-family: monospace;
+}
